@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f5"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#f1f1f5">
+
+            <TextView
+                android:id="@+id/timestamp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="1分钟前"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/left_header_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/timestamp_view"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/msg_content_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timestamp_view"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/right_header_view"
+                android:layout_toEndOf="@+id/left_header_view"
+                android:background="@drawable/chat_from_bg_normal"
+                android:gravity="center|left"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="这是一条新消息" />
+
+            <ImageView
+                android:id="@+id/right_header_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/timestamp_view"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/cardview_dark_background"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
